@@ -1,0 +1,31 @@
+/* styles/members.css */
+body {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+form {
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
