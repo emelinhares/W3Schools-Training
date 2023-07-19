@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisão de Despesas e Aluguel</title>
+    <!-- Inclua o arquivo do Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <main class="container">
+        <header class="bg-primary text-white text-center py-3">
+            <h1>Divisão de Despesas e Aluguel</h1>
+        </header>
+        <div class="row">
+            <form id="expenses-form" class="col-sm-6 offset-sm-3 mt-3">
+                <div class="form-group">
+                    <select id="expense-type" class="form-control" required>
+                        <option value="" disabled selected>Escolha uma opção</option>
+                        <option value="agua">Água</option>
+                        <option value="luz">Luz</option>
+                        <option value="internet">Internet</option>
+                        <option value="gas">Gás</option>
+                        <option value="aluguel">Aluguel</option>
+                    </select>
+                    <label for="expense-type">Tipo de Despesa</label>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="expense-amount" class="form-control" required>
+                    <label for="expense-amount">Valor da Despesa (em R$)</label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Adicionar Despesa</button>
+            </form>
+        </div>
+        <hr>
+        <div id="expenses">
+            <h2 class="text-center">Despesas</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Tipo de Despesa</th>
+                            <th>Valor da Despesa (R$)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expenses-list">
+                        <!-- Aqui serão inseridas as despesas na tabela -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Total</th>
+                            <th id="total-expenses">R$ 0.00</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <form id="residents-form" class="col-sm-6 offset-sm-3 mt-3">
+                <div class="form-group">
+                    <input type="text" id="resident-name" class="form-control" required>
+                    <label for="resident-name">Nome do Morador</label>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="resident-salary" class="form-control" required>
+                    <label for="resident-salary">Salário do Morador (em R$)</label>
+                </div>
+                <button type="button" onclick="addResidentToTable()" class="btn btn-primary btn-block">Adicionar Morador</button>
+            </form>
+        </div>
+        <hr>
+        <div id="residents">
+            <h2 class="text-center">Moradores</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Nome do Morador</th>
+                            <th>Salário do Morador (R$)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="residents-table">
+                        <!-- Aqui serão inseridos os moradores na tabela -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-primary text-white text-center py-3">
+        <p>&copy; <?php echo date("Y"); ?> Nome da Sua Empresa ou Casa</p>
+    </footer>
+    <!-- Inclua os scripts JavaScript do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js">
+        // Coloque aqui o seu código JavaScript personalizado
+        // O código do script.js será colocado aqui
+    </script>
+</body>
+</html>
